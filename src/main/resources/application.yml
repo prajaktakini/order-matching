@@ -1,0 +1,6 @@
+
+spring:
+  application:
+    name: order-matching
+  profiles:
+    include: kafka,mongodb

@@ -1,18 +1,16 @@
 package com.exchange.stock.matching.orders.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.UUID;
 
 @Data
-public class StockCompany {
-    private String stockId;
-    private Symbol symbol;
+@NoArgsConstructor
+@AllArgsConstructor
+public class Company {
 
-    public StockCompany(final Symbol symbol) {
-        this.stockId = UUID.randomUUID().toString();
-        this.symbol = symbol;
-    }
+    private Symbol symbol;
 
     public enum Symbol {
         BAC("BANK OF AMERICA"),
@@ -31,6 +29,5 @@ public class StockCompany {
                     '}';
         }
     }
-
 
 }

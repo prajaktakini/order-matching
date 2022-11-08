@@ -1,6 +1,7 @@
 package com.exchange.stock.matching.orders.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import org.springframework.lang.NonNull;
 
@@ -9,7 +10,8 @@ import java.time.LocalTime;
 
 @Data
 @SuperBuilder
-public class StockOrder {
+@NoArgsConstructor
+public class Order {
 
     @NonNull
     private String orderId;
@@ -23,9 +25,9 @@ public class StockOrder {
     private int quantity;
 
     @NonNull
-    private StockCompany stockCompany;
+    private Company company;
 
     @NonNull
-    private BigDecimal biddingPrice;
+    private BigDecimal price;
 
 }

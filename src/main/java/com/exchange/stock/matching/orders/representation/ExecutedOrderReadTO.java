@@ -1,6 +1,6 @@
 package com.exchange.stock.matching.orders.representation;
 
-import com.exchange.stock.matching.orders.model.StockOrder;
+import com.exchange.stock.matching.orders.model.Order;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;
 
@@ -13,9 +13,9 @@ public class ExecutedOrderReadTO {
 
     private String id;
 
-    private StockOrder sellOrder;
+    private Order sellOrder;
 
-    private StockOrder buyOrder;
+    private Order buyOrder;
 
     private int quantity;
 
